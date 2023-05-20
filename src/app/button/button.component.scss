@@ -1,0 +1,25 @@
+@import 'variables';
+
+button {
+    padding: 14px 20px;
+    color: inherit;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.danger {
+    background-color: $redColor;
+}
+
+.success {
+ background-color: $greenColor;
+}
+
+.blue {
+background-color: $blueColor;
+}
