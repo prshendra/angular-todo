@@ -1,1 +1,16 @@
-<p>todo-item works!</p>
+<app-card>
+    <div class="todo-item">
+        <div class="top">
+            <app-label [variant]="todo.status">{{ todo.status }}</app-label>
+            <app-icon [icon]="deleteIcon"></app-icon>
+        </div>
+        <div class="bottom">
+            <div class="todo-content">
+                <h3 style="margin-bottom:10px">{{ todo.text }}</h3>
+                <p>Due date:</p>
+                <p>{{ todo.dueDate }}</p>
+            </div>
+            <app-button *ngIf="todo.status !== 'done'" variant="blue"><strong>DONE</strong></app-button>
+        </div>
+    </div>
+</app-card>

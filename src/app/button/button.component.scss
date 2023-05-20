@@ -1,25 +1,29 @@
-@import 'variables';
+@import "variables";
 
 button {
-    padding: 14px 20px;
-    color: inherit;
-    border: none;
-    outline: none;
-    border-radius: 5px;
+  padding: 14px 20px;
+  color: inherit;
+  border: none;
+  outline: none;
+  border-radius: 5px;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .danger {
-    background-color: $redColor;
+  background-color: $redColor;
 }
 
 .success {
- background-color: $greenColor;
+  background-color: $greenColor;
 }
 
 .blue {
-background-color: $blueColor;
+  background-color: $blueColor;
+}
+
+.transparent {
+  background-color: transparent;
 }

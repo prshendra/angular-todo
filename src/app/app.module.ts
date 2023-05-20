@@ -15,6 +15,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { FloatingButtonComponent } from './floating-button/floating-button.component';
 import { RoundedButtonComponent } from './rounded-button/rounded-button.component';
+import { IconComponent } from './icon/icon.component';
+import { NewTodoComponent } from './new-todo/new-todo.component';
+import { InputDateComponent } from './input-date/input-date.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { RoundedButtonComponent } from './rounded-button/rounded-button.componen
     DashboardComponent,
     TodoItemComponent,
     FloatingButtonComponent,
-    RoundedButtonComponent
+    RoundedButtonComponent,
+    IconComponent,
+    NewTodoComponent,
+    InputDateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+@import 'variables';
+
+input[type=date] {
+    width: 100%;
+    background-color: $lightGrayColor;
+    border: none;
+    outline: none;
+    color: inherit;
+    padding: 14px 12px;
+    border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

@@ -1,0 +1,24 @@
+@import 'variables';
+
+.label {
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.done {
+    color: inherit;
+    background-color: $greenColor;
+}
+
+.overdue {
+    color: inherit;
+    background-color: $redColor;
+}
+
+.open {
+    color: $bgColor;
+    background-color: $lightestGrayColor;
+}
