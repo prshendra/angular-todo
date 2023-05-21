@@ -9,4 +9,5 @@ export class ButtonComponent {
   @Input() text!: string
   @Input() variant!: string
   @Input() width!:number;
+  @Input() type?:string;
 }

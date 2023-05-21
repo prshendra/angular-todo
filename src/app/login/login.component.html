@@ -1,7 +1,11 @@
 <div class="login-page">
-    <p>Name</p>
-    <app-input-text></app-input-text>
-    <app-button variant="success">
-        Next <fa-icon [icon]="loginIcon"></fa-icon>
-    </app-button>
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+        <div class="form-group">
+            <label for="uname">Name</label>
+            <app-input-text formControlName="name"></app-input-text>
+        </div>
+        <app-button variant="success">
+            Next <fa-icon [icon]="loginIcon"></fa-icon>
+        </app-button>
+    </form>
 </div>

@@ -1,1 +1,5 @@
-<input type="date">
+<input type="datetime-local" 
+    [value]="value" 
+    (input)="onChange($any($event.target).value)" 
+    (blur)="onTouched()" 
+    [disabled]="disabled" />

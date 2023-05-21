@@ -1,12 +1,16 @@
 <div class="dashboard">
     <h1>Hi, {{ name }}</h1>
 
-    <app-todos></app-todos>
+    <ng-container *ngIf="(todos$ | async) as todos">
+        <app-todos *ngIf="todos.length > 0"
+            [todos]="todos">
+        </app-todos>
+        <p *ngIf="todos.length === 0">No Todos. Let's create one!</p>
+    </ng-container>
 
-    <app-floating-button></app-floating-button>
+    <app-floating-button (click)="showDialog()"></app-floating-button>
 
-    <!-- <app-dialog> -->
-        <!-- <app-new-todo></app-new-todo> -->
-        
-    <!-- </app-dialog> -->
+    <app-dialog *ngIf="isDialogVisible">
+        <app-new-todo (onSave)="hideDialog()" (onCancel)="hideDialog()"></app-new-todo>    
+    </app-dialog>
 </div>

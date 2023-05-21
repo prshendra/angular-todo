@@ -1,16 +1,16 @@
 <h3>New Todo</h3>
 
-<form class="form">
+<form class="form" [formGroup]="createTodoForm" (ngSubmit)="addTodo()">
     <div class="form-group">
         <label for="title">Title</label>
-        <app-input-text id="title"></app-input-text>
+        <app-input-text id="title" formControlName="title"></app-input-text>
     </div>
     <div class="form-group">
         <label for="dueDate">Due Date</label>
-        <app-input-date id="dueDate"></app-input-date>
+        <app-input-date id="dueDate" formControlName="dueDate"></app-input-date>
     </div>
     <div class="actions">
-        <app-button variant="blue" [width]="100">Save</app-button>
-        <app-button variant="transparent">Cancel</app-button>
+        <app-button variant="blue" [width]="100" type="submit">Save</app-button>
+        <app-button variant="transparent" type="button" (click)="abort()">Cancel</app-button>
     </div>
 </form>

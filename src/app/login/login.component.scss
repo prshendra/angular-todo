@@ -1,8 +1,16 @@
 .login-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 16px;
     width: 600px;
     margin: 100px auto 0 auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

@@ -1,1 +1,4 @@
-<input type="text">
+<input type="text" 
+    [value]="value" 
+    (input)="onChange($any($event.target).value)" 
+    [disabled]="disabled">

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-floating-button',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./floating-button.component.scss']
 })
 export class FloatingButtonComponent {
-
+  icon = faPlus
 }

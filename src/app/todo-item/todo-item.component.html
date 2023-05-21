@@ -2,7 +2,7 @@
     <div class="todo-item">
         <div class="top">
             <app-label [variant]="todo.status">{{ todo.status }}</app-label>
-            <app-icon [icon]="deleteIcon"></app-icon>
+            <app-icon [icon]="deleteIcon" (click)="showDeleteDialog()"></app-icon>
         </div>
         <div class="bottom">
             <div class="todo-content">
@@ -10,7 +10,25 @@
                 <p>Due date:</p>
                 <p>{{ todo.dueDate }}</p>
             </div>
-            <app-button *ngIf="todo.status !== 'done'" variant="blue"><strong>DONE</strong></app-button>
+            <app-button 
+                *ngIf="todo.status !== 'done'" 
+                variant="blue"
+                (click)="markAsDone()"
+            >
+                    <strong>DONE</strong>
+            </app-button>
         </div>
     </div>
+
+    <app-dialog *ngIf="isDeleteDialogVisible">
+        <div>
+            <p class="text-center">
+                Delete <strong>&ldquo;{{todo.text }}&rdquo;</strong> item?
+            </p>
+            <div class="delete-actions">
+                <app-button variant="blue" (click)="remove()">Yes</app-button>
+                <app-button variant="transparent" (click)="hideDeleteDialog()">No</app-button>
+            </div>
+        </div>
+    </app-dialog>
 </app-card>

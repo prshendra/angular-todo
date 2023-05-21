@@ -18,6 +18,7 @@ import { RoundedButtonComponent } from './rounded-button/rounded-button.componen
 import { IconComponent } from './icon/icon.component';
 import { NewTodoComponent } from './new-todo/new-todo.component';
 import { InputDateComponent } from './input-date/input-date.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { InputDateComponent } from './input-date/input-date.component';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule
   ],
